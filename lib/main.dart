@@ -4,8 +4,11 @@ import 'package:pakplants/Screens/getstarted.dart';
 import 'package:pakplants/Screens/home.dart';
 import 'package:pakplants/Screens/identifiedplant.dart';
 import 'package:pakplants/Screens/login.dart';
+import 'package:pakplants/Screens/plantationdetection.dart';
+import 'package:pakplants/Screens/plantationdetectionresult.dart';
 import 'package:pakplants/Screens/plantinfo.dart';
 import 'package:pakplants/Screens/plantinfoforsale.dart';
+import 'package:pakplants/Screens/profile.dart';
 import 'package:pakplants/Screens/sale.dart';
 import 'package:pakplants/Screens/scanpic.dart';
 import 'package:pakplants/Screens/signup.dart';
@@ -19,16 +22,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // home: Getstarted_screen()
-      // home: Logins_screen(),
-      // home: Signup_Screen(),
-      // home: Home_Screen(),
-      // home: Plantinfo_Screen(),
-      // home: Scanpic_screen(),
-      // home: IndefiedPlant_Screen(),
-      // home: Sale_Screen(),
-      // home: Plantinfoforsale_screen(),
+      
       home: Cart_screen(),
+
     );
   }
 }
