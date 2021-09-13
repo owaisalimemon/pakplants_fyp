@@ -22,9 +22,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
-      home: Cart_screen(),
-
+      home: Getstarted_screen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -3,6 +3,9 @@ import 'package:pakplants/buttons/button134.dart';
 import 'package:pakplants/buttons/button2.dart';
 import 'package:pakplants/widgets/textfield.dart';
 
+import 'home.dart';
+import 'login.dart';
+
 class Signup_Screen extends StatefulWidget {
   const Signup_Screen({Key? key}) : super(key: key);
 
@@ -30,7 +33,7 @@ class _Signup_ScreenState extends State<Signup_Screen> {
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(top: height * 0.1),
+            padding: EdgeInsets.only(top: height * 0.2),
             child: Container(
                 margin:
                     EdgeInsets.only(left: width * 0.05, right: width * 0.05),
@@ -85,7 +88,14 @@ class _Signup_ScreenState extends State<Signup_Screen> {
                           borderRadius: BorderRadius.circular(30.0),
                         ),
                         elevation: 2,
-                        child: button2('Sign Up', Color(0xff1c6434), 30, true),
+                        child:
+                            button2('Sign Up', Color(0xff1c6434), 30, true, () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Home_Screen()),
+                          );
+                        }),
                       ),
                     ),
                     SizedBox(height: height * 0.03),
@@ -105,7 +115,13 @@ class _Signup_ScreenState extends State<Signup_Screen> {
                             TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w800,
-                                color: Color(0xff510b59))),
+                                color: Color(0xff510b59)), () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Logins_screen()),
+                          );
+                        }),
                       ],
                     )
                   ],

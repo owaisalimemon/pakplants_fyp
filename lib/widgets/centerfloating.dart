@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pakplants/Screens/scanpic.dart';
 
 class Floatingcenterbutton extends StatefulWidget {
   const Floatingcenterbutton({Key? key}) : super(key: key);
@@ -13,7 +14,12 @@ class _FloatingcenterbuttonState extends State<Floatingcenterbutton> {
     return FloatingActionButton(
       backgroundColor: Colors.transparent,
       elevation: 0,
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Scanpic_screen()),
+        );
+      },
       child: Icon(
         Icons.camera_alt,
         size: 50,

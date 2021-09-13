@@ -6,6 +6,8 @@ import 'package:pakplants/widgets/centerfloating.dart';
 import 'package:pakplants/widgets/tileforcart.dart';
 import 'package:pakplants/widgets/tileforsale.dart';
 
+import 'home.dart';
+
 class Cart_screen extends StatefulWidget {
   const Cart_screen({Key? key}) : super(key: key);
 
@@ -24,14 +26,14 @@ class _Cart_screenState extends State<Cart_screen> {
       appBar: AppBar(
         backgroundColor: Color(0xff1c6434),
         title: Text(
-          'Cart',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: width * 0.08),
+          'PAKPLANTS',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
         centerTitle: true,
       ),
-      floatingActionButton: Floatingcenterbutton(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomNav(),
+      // floatingActionButton: Floatingcenterbutton(),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // bottomNavigationBar: BottomNav(),
       body: Container(
         height: height,
         width: width,
@@ -83,7 +85,13 @@ class _Cart_screenState extends State<Cart_screen> {
                                     fontSize: width * 0.055,
                                     fontWeight: FontWeight.w800,
                                     color: Colors.red,
-                                  )),
+                                  ), () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Home_Screen()),
+                                );
+                              }),
                               SizedBox(
                                 width: width * 0.2,
                               ),
@@ -102,7 +110,12 @@ class _Cart_screenState extends State<Cart_screen> {
               ),
               SizedBox(height: height * 0.02),
               Center(
-                child: button2("Checkout", Color(0xff1c6434), 30, true),
+                child: button2("Checkout", Color(0xff1c6434), 30, true, () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Home_Screen()),
+                  );
+                }),
               ),
             ],
           ),

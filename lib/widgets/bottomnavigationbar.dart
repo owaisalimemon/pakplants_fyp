@@ -22,7 +22,7 @@ class _BottomNavState extends State<BottomNav> {
     "Profile",
   ];
 
-  late int _bottomNavIndex = 4;
+  int _bottomNavIndex = 0;
   @override
   Widget build(BuildContext context) {
     return AnimatedBottomNavigationBar.builder(

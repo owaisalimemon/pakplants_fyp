@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pakplants/Screens/home.dart';
 import 'package:pakplants/buttons/button2.dart';
 
 class Getstarted_screen extends StatefulWidget {
@@ -90,7 +91,13 @@ class _Getstarted_screenState extends State<Getstarted_screen> {
                       borderRadius: BorderRadius.circular(30.0),
                     ),
                     elevation: 2,
-                    child: button2('GET STARTED', Color(0xff1c6434), 30, true),
+                    child:
+                        button2('GET STARTED', Color(0xff1c6434), 30, true, () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Home_Screen()),
+                      );
+                    }),
                   ),
                 ],
               )),

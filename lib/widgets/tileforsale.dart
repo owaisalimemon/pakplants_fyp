@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pakplants/Screens/plantinfoforsale.dart';
 import 'package:pakplants/buttons/button2.dart';
 import 'package:pakplants/buttons/buttonforsale.dart';
 
@@ -16,7 +17,12 @@ class _TielforsaleState extends State<Tielforsale> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Plantinfoforsale_screen()),
+        );
+      },
       child: Padding(
         padding: EdgeInsets.only(left: 0, top: height * 0.02),
         child: Column(

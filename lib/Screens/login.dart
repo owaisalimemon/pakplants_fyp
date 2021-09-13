@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pakplants/Screens/signup.dart';
 import 'package:pakplants/buttons/button134.dart';
 import 'package:pakplants/buttons/button2.dart';
 import 'package:pakplants/widgets/textfield.dart';
+
+import 'home.dart';
 
 class Logins_screen extends StatefulWidget {
   const Logins_screen({Key? key}) : super(key: key);
@@ -64,7 +67,13 @@ class _Logins_screenState extends State<Logins_screen> {
                             TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w800,
-                                color: Colors.grey.shade700)),
+                                color: Colors.grey.shade700), () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Logins_screen()),
+                          );
+                        }),
                       ),
                     ),
                     SizedBox(
@@ -76,7 +85,14 @@ class _Logins_screenState extends State<Logins_screen> {
                           borderRadius: BorderRadius.circular(30.0),
                         ),
                         elevation: 2,
-                        child: button2('Sign In', Color(0xff1c6434), 30, true),
+                        child:
+                            button2('Sign In', Color(0xff1c6434), 30, true, () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Home_Screen()),
+                          );
+                        }),
                       ),
                     ),
                     SizedBox(height: height * 0.02),
@@ -94,9 +110,16 @@ class _Logins_screenState extends State<Logins_screen> {
                             'Sign up',
                             true,
                             TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w800,
-                                color: Color(0xff510b59))),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w800,
+                              color: Color(0xff510b59),
+                            ), () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Signup_Screen()),
+                          );
+                        }),
                       ],
                     )
                   ],

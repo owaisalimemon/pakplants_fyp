@@ -17,27 +17,16 @@ class _PlantationResultState extends State<PlantationResult> {
     return Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          leading: IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.arrow_back_sharp,
-              size: height * 0.05,
-            ),
-          ),
+          backgroundColor: Color(0xff1c6434),
           title: Text(
-            'Result',
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: width * 0.06,
-                color: Colors.black),
+            'Plantation detection',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
           ),
           centerTitle: true,
         ),
-        floatingActionButton: Floatingcenterbutton(),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        bottomNavigationBar: BottomNav(),
+        // floatingActionButton: Floatingcenterbutton(),
+        // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        // bottomNavigationBar: BottomNav(),
         body: SingleChildScrollView(
           child: Container(
             height: height,

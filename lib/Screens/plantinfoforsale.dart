@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:pakplants/Screens/cart.dart';
 import 'package:pakplants/buttons/button2.dart';
 import 'package:pakplants/widgets/bottomnavigationbar.dart';
 import 'package:pakplants/widgets/centerfloating.dart';
+
+import 'home.dart';
 
 class Plantinfoforsale_screen extends StatefulWidget {
   const Plantinfoforsale_screen({Key? key}) : super(key: key);
@@ -22,14 +25,14 @@ class _Plantinfoforsale_screenState extends State<Plantinfoforsale_screen> {
       appBar: AppBar(
         backgroundColor: Color(0xff1c6434),
         title: Text(
-          'Information',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: width * 0.08),
+          'PAKPLANTS',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
         centerTitle: true,
       ),
-      floatingActionButton: Floatingcenterbutton(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomNav(),
+      // floatingActionButton: Floatingcenterbutton(),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // bottomNavigationBar: BottomNav(),
       body: SingleChildScrollView(
         child: Container(
             height: height,
@@ -96,11 +99,23 @@ class _Plantinfoforsale_screenState extends State<Plantinfoforsale_screen> {
                       EdgeInsets.only(left: width * 0.05, right: width * 0.05),
                   child: Row(
                     children: [
-                      button2("Add to Cart", Color(0xff1c6434), 30, true),
+                      button2("Add to Cart", Color(0xff1c6434), 30, true, () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Cart_screen()),
+                        );
+                      }),
                       SizedBox(
                         width: width * 0.11,
                       ),
-                      button2("Buy", Color(0xff1c6434), 30, true),
+                      button2("Buy", Color(0xff1c6434), 30, true, () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Cart_screen()),
+                        );
+                      }),
                     ],
                   ),
                 ),

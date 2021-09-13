@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pakplants/Screens/getstarted.dart';
 import 'package:pakplants/widgets/bottomnavigationbar.dart';
 import 'package:pakplants/widgets/centerfloating.dart';
 
@@ -16,28 +17,16 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.arrow_back_sharp,
-            size: height * 0.05,
-            color: Colors.black,
-          ),
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+        backgroundColor: Color(0xff1c6434),
         title: Text(
-          'Profile',
-          style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: width * 0.07,
-              color: Colors.black),
+          'PAKPLANTS',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
         centerTitle: true,
       ),
-      floatingActionButton: Floatingcenterbutton(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomNav(),
+      // floatingActionButton: Floatingcenterbutton(),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // bottomNavigationBar: BottomNav(),
       body: SingleChildScrollView(
         child: Container(
           height: height,
@@ -166,11 +155,20 @@ class _ProfileState extends State<Profile> {
                       SizedBox(
                         width: width * 0.14,
                       ),
-                      Text("Logout",
-                          style: TextStyle(
-                            color: Colors.red,
-                            fontSize: height * 0.03,
-                          )),
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Getstarted_screen()),
+                          );
+                        },
+                        child: Text("Logout",
+                            style: TextStyle(
+                              color: Colors.red,
+                              fontSize: height * 0.03,
+                            )),
+                      ),
                     ],
                   ),
                 ),

@@ -22,14 +22,14 @@ class _Sale_ScreenState extends State<Sale_Screen> {
       appBar: AppBar(
         backgroundColor: Color(0xff1c6434),
         title: Text(
-          'Plants for Sale',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: width * 0.08),
+          'Plant For Sale',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
         centerTitle: true,
       ),
-      floatingActionButton: Floatingcenterbutton(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomNav(),
+      // floatingActionButton: Floatingcenterbutton(),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // bottomNavigationBar: BottomNav(),
       body: Container(
         height: height,
         width: width,

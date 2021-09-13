@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pakplants/Screens/plantinfo.dart';
 
 class Collagehome extends StatefulWidget {
   const Collagehome({Key? key}) : super(key: key);
@@ -14,7 +15,12 @@ class _CollagehomeState extends State<Collagehome> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Plantinfo_Screen()),
+        );
+      },
       child: Padding(
         padding: EdgeInsets.only(left: 0, top: height * 0.03),
         child: Column(

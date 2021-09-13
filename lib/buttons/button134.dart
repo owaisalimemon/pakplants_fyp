@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-button134(String text, bool enable, TextStyle style) {
+button134(String text, bool enable, TextStyle style, Function _callback) {
   return Stack(
     children: <Widget>[
       Container(
@@ -24,7 +24,7 @@ button134(String text, bool enable, TextStyle style) {
               child: InkWell(
                 splashColor: Colors.black.withOpacity(0.2),
                 onTap: () {
-                  // _callback();
+                  _callback();
                 }, // needed
               )),
         )

@@ -22,14 +22,14 @@ class _Plantinfo_ScreenState extends State<Plantinfo_Screen> {
       appBar: AppBar(
         backgroundColor: Color(0xff1c6434),
         title: Text(
-          'Information',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: width * 0.08),
+          'Plant Information',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
         centerTitle: true,
       ),
-      floatingActionButton: Floatingcenterbutton(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: BottomNav(),
+      // floatingActionButton: Floatingcenterbutton(),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // bottomNavigationBar: BottomNav(),
       body: SingleChildScrollView(
         child: Container(
             height: height,
