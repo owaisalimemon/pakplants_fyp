@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pakplants/Screens/cart.dart';
 import 'package:pakplants/Screens/getstarted.dart';
 import 'package:pakplants/Screens/home.dart';
 import 'package:pakplants/Screens/identifiedplant.dart';
@@ -21,18 +22,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //home: Getstarted_screen(),
-      // home: Logins_screen(),
-      // home: Signup_Screen(),
-      // home: Home_Screen(),
-      // home: Plantinfo_Screen(),
-      //home: Scanpic_screen(),
-      // home: IndefiedPlant_Screen(),
-      //home: Sale_Screen(),
-      //home: Plantinfoforsale_screen(),
-      //home: PlantationResult(),
-      home: PlantationDetection(),
-      //home: Profile(),
+      
+      home: Cart_screen(),
+
     );
   }
 }
