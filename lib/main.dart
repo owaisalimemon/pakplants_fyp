@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pakplants/Screens/cart.dart';
 import 'package:pakplants/Screens/getstarted.dart';
 import 'package:pakplants/Screens/home.dart';
 import 'package:pakplants/Screens/identifiedplant.dart';
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
       // home: Scanpic_screen(),
       // home: IndefiedPlant_Screen(),
       // home: Sale_Screen(),
-      home: Plantinfoforsale_screen(),
+      // home: Plantinfoforsale_screen(),
+      home: Cart_screen(),
     );
   }
 }
