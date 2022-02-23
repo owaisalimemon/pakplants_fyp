@@ -119,32 +119,32 @@ class _TielforsaleState extends State<Tielforsale> {
                         ),
                       )),
 
-                  Positioned(
-                    top: height * 0.13,
-                    left: width * 0.7,
-                    child: Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      elevation: 2,
-                      child: buttonforsale('Buy', Color(0xff1c6434), 30, true),
-                    ),
-                  ),
+                  // Positioned(
+                  //   top: height * 0.13,
+                  //   left: width * 0.7,
+                  //   child: Card(
+                  //     shape: RoundedRectangleBorder(
+                  //       borderRadius: BorderRadius.circular(30.0),
+                  //     ),
+                  //     elevation: 2,
+                  //     child: buttonforsale('Buy', Color(0xff1c6434), 30, true),
+                  //   ),
+                  // ),
 
-                  Positioned(
-                      top: height * 0.004,
-                      left: width * 0.82,
-                      child: Container(
-                        width: width * 0.13,
-                        height: height * 0.05,
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.shopping_cart_rounded,
-                              size: 35,
-                              color: Color(0xff1c6434),
-                            )),
-                      ))
+                  // Positioned(
+                  //     top: height * 0.004,
+                  //     left: width * 0.82,
+                  //     child: Container(
+                  //       width: width * 0.13,
+                  //       height: height * 0.05,
+                  //       child: IconButton(
+                  //           onPressed: () {},
+                  //           icon: Icon(
+                  //             Icons.shopping_cart_rounded,
+                  //             size: 35,
+                  //             color: Color(0xff1c6434),
+                  //           )),
+                  //     ))
 
                   // Positioned(
                   //     top: height * 0.1,

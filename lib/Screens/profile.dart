@@ -17,6 +17,7 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Color(0xff1c6434),
         title: Text(
           'PAKPLANTS',

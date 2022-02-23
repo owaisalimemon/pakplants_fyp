@@ -36,6 +36,7 @@ class _Home_ScreenState extends State<Home_Screen> {
   List screens = [
     Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Color(0xff1c6434),
         title: Text(
           'PAKPLANTS',

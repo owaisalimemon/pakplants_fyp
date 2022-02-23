@@ -6,6 +6,7 @@ import 'package:pakplants/controller/scanimagecontroller.dart';
 import 'package:pakplants/widgets/bottomnavigationbar.dart';
 import 'package:pakplants/widgets/centerfloating.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:ars_dialog/ars_dialog.dart';
 
 import 'home.dart';
 import 'identifiedplant.dart';
@@ -55,6 +56,8 @@ class Scanpic_screen extends ConsumerWidget {
     var controller = watch(getscan);
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
+    ProgressDialog progressDialog = ProgressDialog(context,
+        message: Text("Please Wait....."), title: Text("Loading"));
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff1c6434),
@@ -86,11 +89,13 @@ class Scanpic_screen extends ConsumerWidget {
                         child: Container(
                           width: width * 0.8,
                           height: height * 0.35,
-                          color: Colors.blue,
-                          child: Image.asset(
-                            'assets/images/background.png',
-                            fit: BoxFit.fill,
-                          ),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                    'assets/images/background.png',
+                                  ),
+                                  fit: BoxFit.fill)),
                         ),
                       )
                     : Center(
@@ -98,6 +103,7 @@ class Scanpic_screen extends ConsumerWidget {
                           width: width * 0.8,
                           height: height * 0.35,
                           decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
                               image: DecorationImage(
                                   image: FileImage(File(controller.image!)),
                                   fit: BoxFit.cover)),
@@ -145,8 +151,11 @@ class Scanpic_screen extends ConsumerWidget {
                         enable: true,
                         callback: () async {
                           try {
+                            progressDialog.show();
+
                             var result = await NetworkService()
                                 .postimage(File(controller.image!));
+                            progressDialog.dismiss();
                             controller.notifyListeners();
 
                             await Navigator.push(context,
@@ -157,7 +166,28 @@ class Scanpic_screen extends ConsumerWidget {
                               );
                             }));
                           } catch (e) {
+                            print('error');
                             print(e);
+                            return showDialog(
+                              context: context,
+                              builder: (context) {
+                                return AlertDialog(
+                                  title: Text('Result:'),
+                                  content: Text(
+                                    e.toString(),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      child: const Text('Ok'),
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
                           }
                         }),
                   ),

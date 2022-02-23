@@ -21,6 +21,7 @@ class _Sale_ScreenState extends State<Sale_Screen> {
 
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Color(0xff1c6434),
         title: Text(
           'Plant For Sale',
