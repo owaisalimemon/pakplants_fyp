@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "450729063724",
+    "project_id": "pakplants-9c951",
+    "storage_bucket": "pakplants-9c951.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450729063724:android:d4139843e8921114df2889",
+        "android_client_info": {
+          "package_name": "com.example.pakplants"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "450729063724-af59bs5shvumg3nivtfti1lj86rg40ol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDneAUoNKTyM5S1A1xJCmlhkxifPgEU1HI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "450729063724-af59bs5shvumg3nivtfti1lj86rg40ol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

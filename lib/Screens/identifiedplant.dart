@@ -1,18 +1,18 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:pakplants/controller/scanimagecontroller.dart';
+import 'package:pakplants/model/responsemodel.dart';
 import 'package:pakplants/widgets/bottomnavigationbar.dart';
 import 'package:pakplants/widgets/centerfloating.dart';
 
-class IndefiedPlant_Screen extends StatefulWidget {
-  const IndefiedPlant_Screen({Key? key}) : super(key: key);
-
-  @override
-  _IndefiedPlant_ScreenState createState() => _IndefiedPlant_ScreenState();
-}
-
-class _IndefiedPlant_ScreenState extends State<IndefiedPlant_Screen> {
-  late double width, height;
+class IndefiedPlant_Screen extends StatelessWidget {
+  ResponseModel result;
+  scanimagecontroller controller;
+  IndefiedPlant_Screen({required this.result, required this.controller});
+  double width = 0, height = 0;
   @override
   Widget build(BuildContext context) {
     width = MediaQuery.of(context).size.width;
@@ -48,11 +48,10 @@ class _IndefiedPlant_ScreenState extends State<IndefiedPlant_Screen> {
                   child: Container(
                     width: width * 0.8,
                     height: height * 0.35,
-                    color: Colors.blue,
-                    child: Image.asset(
-                      'assets/images/background.png',
-                      fit: BoxFit.fill,
-                    ),
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: FileImage(File(controller.image!)),
+                            fit: BoxFit.cover)),
                   ),
                 ),
                 SizedBox(
@@ -80,7 +79,7 @@ class _IndefiedPlant_ScreenState extends State<IndefiedPlant_Screen> {
                             border: Border.all(color: Colors.red, width: 4)),
                         width: width * 0.58,
                         child: Text(
-                          'Rose',
+                          result.bestMatch,
                           style: TextStyle(
                               fontSize: height * 0.025,
                               fontWeight: FontWeight.w500),
@@ -92,8 +91,14 @@ class _IndefiedPlant_ScreenState extends State<IndefiedPlant_Screen> {
                 SizedBox(
                   height: height * 0.05,
                 ),
-                informationtext('Plant info :',
-                    'rose,genus of some 100 species of perennial shrubs in the rose family (Rosaceae).'),
+                informationtext(
+                    'Plant info :',
+                    this
+                        .result
+                        .results
+                        .first
+                        .species
+                        .scientificNameWithoutAuthor),
                 SizedBox(
                   height: height * 0.05,
                 ),

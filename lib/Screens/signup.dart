@@ -88,14 +88,18 @@ class _Signup_ScreenState extends State<Signup_Screen> {
                           borderRadius: BorderRadius.circular(30.0),
                         ),
                         elevation: 2,
-                        child:
-                            button2('Sign Up', Color(0xff1c6434), 30, true, () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Home_Screen()),
-                          );
-                        }),
+                        child: button2(
+                            text: 'Sign Up',
+                            color: Color(0xff1c6434),
+                            radius: 30,
+                            enable: true,
+                            callback: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Home_Screen()),
+                              );
+                            }),
                       ),
                     ),
                     SizedBox(height: height * 0.03),

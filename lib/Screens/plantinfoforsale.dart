@@ -8,7 +8,9 @@ import 'package:pakplants/widgets/centerfloating.dart';
 import 'home.dart';
 
 class Plantinfoforsale_screen extends StatefulWidget {
-  const Plantinfoforsale_screen({Key? key}) : super(key: key);
+  var object;
+
+  Plantinfoforsale_screen({required this.object});
 
   @override
   _Plantinfoforsale_screenState createState() =>
@@ -16,6 +18,23 @@ class Plantinfoforsale_screen extends StatefulWidget {
 }
 
 class _Plantinfoforsale_screenState extends State<Plantinfoforsale_screen> {
+  List<Widget> images = [];
+
+  @override
+  void initState() {
+    super.initState();
+
+    for (int i = 0; i < widget.object['images'].length; i++) {
+      images.add(
+        Image.network(
+          widget.object['images'][i],
+          fit: BoxFit.fill,
+        ),
+      );
+    }
+    setState(() {});
+  }
+
   late double width, height;
   @override
   Widget build(BuildContext context) {
@@ -51,36 +70,22 @@ class _Plantinfoforsale_screenState extends State<Plantinfoforsale_screen> {
                     width: width * 1,
                     height: height * 0.3,
                     child: ImageSlideshow(
-                      width: double.infinity,
-                      initialPage: 0,
-                      indicatorColor: Colors.blue,
-                      indicatorBackgroundColor: Colors.grey,
-                      onPageChanged: (value) {
-                        debugPrint('Page changed: $value');
-                      },
-                      autoPlayInterval: 3000,
-                      isLoop: true,
-                      children: [
-                        Image.asset(
-                          'assets/images/background.png',
-                          fit: BoxFit.fill,
-                        ),
-                        Image.asset(
-                          'assets/images/back.png',
-                          fit: BoxFit.fill,
-                        ),
-                        Image.asset(
-                          'assets/images/logo.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ],
-                    ),
+                        width: double.infinity,
+                        initialPage: 0,
+                        indicatorColor: Colors.blue,
+                        indicatorBackgroundColor: Colors.grey,
+                        onPageChanged: (value) {
+                          debugPrint('Page changed: $value');
+                        },
+                        autoPlayInterval: 3000,
+                        isLoop: false,
+                        children: images),
                   ),
                 ),
                 SizedBox(
                   height: height * 0.03,
                 ),
-                informationtext('Plant Name :', 'Rose '),
+                informationtext('Plant Name :', widget.object['product_name']),
                 SizedBox(
                   height: height * 0.05,
                 ),
@@ -99,23 +104,33 @@ class _Plantinfoforsale_screenState extends State<Plantinfoforsale_screen> {
                       EdgeInsets.only(left: width * 0.05, right: width * 0.05),
                   child: Row(
                     children: [
-                      button2("Add to Cart", Color(0xff1c6434), 30, true, () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Cart_screen()),
-                        );
-                      }),
+                      button2(
+                          text: "Add to Cart",
+                          color: Color(0xff1c6434),
+                          radius: 30,
+                          enable: true,
+                          callback: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Cart_screen()),
+                            );
+                          }),
                       SizedBox(
                         width: width * 0.11,
                       ),
-                      button2("Buy", Color(0xff1c6434), 30, true, () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Cart_screen()),
-                        );
-                      }),
+                      button2(
+                          text: "Buy",
+                          color: Color(0xff1c6434),
+                          radius: 30,
+                          enable: true,
+                          callback: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Cart_screen()),
+                            );
+                          }),
                     ],
                   ),
                 ),

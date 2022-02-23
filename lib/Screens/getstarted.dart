@@ -91,13 +91,18 @@ class _Getstarted_screenState extends State<Getstarted_screen> {
                       borderRadius: BorderRadius.circular(30.0),
                     ),
                     elevation: 2,
-                    child:
-                        button2('GET STARTED', Color(0xff1c6434), 30, true, () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Home_Screen()),
-                      );
-                    }),
+                    child: button2(
+                        text: 'GET STARTED',
+                        color: Color(0xff1c6434),
+                        radius: 30,
+                        enable: true,
+                        callback: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Home_Screen()),
+                          );
+                        }),
                   ),
                 ],
               )),

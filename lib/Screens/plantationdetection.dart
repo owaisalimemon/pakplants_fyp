@@ -6,6 +6,7 @@ import 'package:pakplants/buttons/buttonforsale.dart';
 import 'package:pakplants/widgets/bottomnavigationbar.dart';
 import 'package:pakplants/widgets/centerfloating.dart';
 import 'package:pakplants/widgets/googlemaps.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'home.dart';
 
@@ -22,14 +23,7 @@ class _PlantationDetectionState extends State<PlantationDetection> {
     height = MediaQuery.of(context).size.height;
     return Scaffold(
         extendBodyBehindAppBar: true,
-        appBar: AppBar(
-          backgroundColor: Color(0xff1c6434),
-          title: Text(
-            'Plant identification',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-          ),
-          centerTitle: true,
-        ),
+
         // floatingActionButton: Floatingcenterbutton(),
         // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         // bottomNavigationBar: BottomNav(),
@@ -42,29 +36,35 @@ class _PlantationDetectionState extends State<PlantationDetection> {
               fit: BoxFit.cover,
             ),
           ),
-          child: Padding(
-            padding: EdgeInsets.only(top: height * 0.1),
-            child: Center(
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    height: height * 0.45,
-                    width: width * 0.8,
-                    color: Colors.green,
-                  ),
-                  SizedBox(height: height * 0.05),
-                  //buttonforsale("Check Plantation", Color(0xff1c6434), 30, true)
-                  button2("Check Plantation", Color(0xff1c6434), 30, true, () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => PlantationResult()),
-                    );
-                  }),
-                  //button134("Check Plantation", true, )
-                ],
+          child: Stack(
+            children: <Widget>[
+              GoogleMap(
+                myLocationEnabled: true,
+                mapType: MapType.satellite,
+                initialCameraPosition:
+                    CameraPosition(target: LatLng(23.5880, 58.3829), zoom: 18),
+                minMaxZoomPreference: MinMaxZoomPreference(17.5, 22),
               ),
-            ),
+              SizedBox(height: height * 0.05),
+              //buttonforsale("Check Plantation", Color(0xff1c6434), 30, true)
+              Positioned(
+                  top: height * 0.8,
+                  left: width * 0.3,
+                  child: button2(
+                      text: "Check Plantation",
+                      color: Color(0xff1c6434),
+                      radius: 30,
+                      enable: true,
+                      callback: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PlantationResult()),
+                        );
+                      }))
+
+              //button134("Check Plantation", true, )
+            ],
           ),
         ));
   }

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:pakplants/widgets/bottomnavigationbar.dart';
 import 'package:pakplants/widgets/centerfloating.dart';
@@ -39,9 +40,23 @@ class _Sale_ScreenState extends State<Sale_Screen> {
             fit: BoxFit.cover,
           ),
         ),
-        child: ListView.builder(
-            itemCount: 10,
-            itemBuilder: (BuildContext context, int index) => Tielforsale()),
+        child: StreamBuilder<QuerySnapshot>(
+            stream:
+                FirebaseFirestore.instance.collection('products').snapshots(),
+            builder: (context, snapshot) {
+              if (snapshot.hasData) {
+                return ListView.builder(
+                    itemCount: snapshot.data!.docs.length,
+                    itemBuilder: (BuildContext context, int index) =>
+                        Tielforsale(
+                          object: snapshot.data!.docs[index],
+                        ));
+              } else {
+                return Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+            }),
       ),
     );
   }

@@ -4,8 +4,8 @@ import 'package:pakplants/buttons/button2.dart';
 import 'package:pakplants/buttons/buttonforsale.dart';
 
 class Tielforsale extends StatefulWidget {
-  const Tielforsale({Key? key}) : super(key: key);
-
+  var object;
+  Tielforsale({required this.object});
   @override
   _TielforsaleState createState() => _TielforsaleState();
 }
@@ -20,7 +20,9 @@ class _TielforsaleState extends State<Tielforsale> {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Plantinfoforsale_screen()),
+          MaterialPageRoute(
+              builder: (context) =>
+                  Plantinfoforsale_screen(object: widget.object)),
         );
       },
       child: Padding(
@@ -54,7 +56,7 @@ class _TielforsaleState extends State<Tielforsale> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage('assets/images/back.png'),
+                              image: NetworkImage(widget.object['images'][0]),
                               fit: BoxFit.fill)),
                     ),
                   ),
@@ -95,7 +97,7 @@ class _TielforsaleState extends State<Tielforsale> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Rose Plant',
+                            Text(widget.object['product_name'],
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black,

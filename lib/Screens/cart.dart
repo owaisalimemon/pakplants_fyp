@@ -110,12 +110,17 @@ class _Cart_screenState extends State<Cart_screen> {
               ),
               SizedBox(height: height * 0.02),
               Center(
-                child: button2("Checkout", Color(0xff1c6434), 30, true, () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Home_Screen()),
-                  );
-                }),
+                child: button2(
+                    text: "Checkout",
+                    color: Color(0xff1c6434),
+                    radius: 30,
+                    enable: true,
+                    callback: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Home_Screen()),
+                      );
+                    }),
               ),
             ],
           ),
