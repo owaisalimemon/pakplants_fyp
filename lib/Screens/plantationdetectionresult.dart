@@ -1,14 +1,16 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:pakplants/buttons/button2.dart';
+import 'package:pakplants/controller/plantationdetectcontroller.dart';
+import 'package:pakplants/model/responsemodel.dart';
 import 'package:pakplants/widgets/bottomnavigationbar.dart';
 import 'package:pakplants/widgets/centerfloating.dart';
 
-class PlantationResult extends StatefulWidget {
-  @override
-  _PlantationResultState createState() => _PlantationResultState();
-}
-
-class _PlantationResultState extends State<PlantationResult> {
+class PlantationResult extends StatelessWidget {
+  ResponseModel result;
+  Plantationdetectcontroller controller;
+  PlantationResult({required this.result, required this.controller});
   late double width, height;
   @override
   Widget build(BuildContext context) {
@@ -45,11 +47,15 @@ class _PlantationResultState extends State<PlantationResult> {
                     Container(
                       height: height * 0.45,
                       width: width * 0.8,
-                      color: Colors.green,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          image: DecorationImage(
+                              image: FileImage(File(controller.image!)),
+                              fit: BoxFit.cover)),
                     ),
                     SizedBox(height: height * 0.05),
                     Text(
-                      "Plantation in selected",
+                      result.results.first.species.scientificName,
                       style: TextStyle(
                           color: Color(0xff1c6434), fontSize: height * 0.04),
                     ),
