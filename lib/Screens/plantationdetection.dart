@@ -1,9 +1,12 @@
+import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:ars_dialog/ars_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:pakplants/Screens/network.dart';
 import 'package:pakplants/Screens/networkforplantation.dart';
 import 'package:pakplants/Screens/plantationdetectionresult.dart';
 import 'package:pakplants/buttons/button134.dart';
@@ -26,21 +29,47 @@ class PlantationDetection extends ConsumerWidget {
     } else {
       controller.image = image.path;
       controller.notifyListeners();
-      // try {
-      //   var result = await NetworkService().postimage(File(image.path));
-      //   controller.notifyListeners();
-
-      //   await Navigator.push(context, MaterialPageRoute(builder: (context) {
-      //     return IndefiedPlant_Screen(
-      //       result: result,
-      //     );
-      //   }));
-      // } catch (e) {
-      //   print(e);
-      // }
+      ProgressDialog progressDialog = ProgressDialog(context,
+          message: Text("Please Wait....."), title: Text("Loading"));
+      progressDialog.show();
+      try {
+        var result = await NetworkService().wajid(File(image.path));
+        controller.notifyListeners();
+        progressDialog.dismiss();
+        await Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return PlantationResult(
+            controller: controller,
+            result: result,
+          );
+        }));
+      } catch (e) {
+        progressDialog.dismiss();
+        return showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              title: Text('Result:'),
+              content: Text(
+                e.toString(),
+                textAlign: TextAlign.center,
+              ),
+              actions: [
+                TextButton(
+                  child: const Text('Ok'),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            );
+          },
+        );
+      }
     }
   }
 
+  GoogleMapController? ctr;
+  Completer<GoogleMapController> _controller = Completer();
   @override
   Widget build(BuildContext context, watch) {
     var controller = watch(getmap);
@@ -66,10 +95,15 @@ class PlantationDetection extends ConsumerWidget {
           child: Stack(
             children: <Widget>[
               GoogleMap(
+                onMapCreated: (c) {
+                  _controller.complete(c);
+                  ctr = c;
+                  controller.notifyListeners();
+                },
                 myLocationEnabled: true,
-                mapType: MapType.satellite,
+                mapType: MapType.normal,
                 initialCameraPosition:
-                    CameraPosition(target: LatLng(23.5880, 58.3829), zoom: 18),
+                    CameraPosition(target: LatLng(23.5880, 58.3829), zoom: 25),
                 minMaxZoomPreference: MinMaxZoomPreference(17.5, 22),
               ),
               SizedBox(height: height * 0.05),
@@ -84,46 +118,6 @@ class PlantationDetection extends ConsumerWidget {
                       enable: true,
                       callback: () async {
                         await gallery(context, controller);
-
-                        try {
-                          progressDialog.show();
-
-                          var result = await NetworkServiceForPlantation()
-                              .postimage(File(controller.image!));
-                          progressDialog.dismiss();
-                          controller.notifyListeners();
-
-                          await Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return PlantationResult(
-                              result: result,
-                              controller: controller,
-                            );
-                          }));
-                        } catch (e) {
-                          print('error');
-                          print(e);
-                          return showDialog(
-                            context: context,
-                            builder: (context) {
-                              return AlertDialog(
-                                title: Text('Result:'),
-                                content: Text(
-                                  e.toString(),
-                                  textAlign: TextAlign.center,
-                                ),
-                                actions: [
-                                  TextButton(
-                                    child: const Text('Ok'),
-                                    onPressed: () {
-                                      Navigator.of(context).pop();
-                                    },
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        }
                       }))
 
               //button134("Check Plantation", true, )

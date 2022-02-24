@@ -112,7 +112,29 @@ class _Home_ScreenState extends State<Home_Screen> {
               fit: BoxFit.cover,
             ),
           ),
-          child: screens[_bottomNavIndex]),
+          child: IndexedStack(
+            index: _bottomNavIndex,
+            children: [
+              Scaffold(
+                appBar: AppBar(
+                  automaticallyImplyLeading: false,
+                  backgroundColor: Color(0xff1c6434),
+                  title: Text(
+                    'PAKPLANTS',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                  ),
+                  centerTitle: true,
+                ),
+                body: ListView.builder(
+                    itemCount: 10,
+                    itemBuilder: (BuildContext context, int index) =>
+                        Collagehome()),
+              ),
+              PlantationDetection(),
+              Sale_Screen(),
+              Profile(),
+            ],
+          )),
     );
   }
 }

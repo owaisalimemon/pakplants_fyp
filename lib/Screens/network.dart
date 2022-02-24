@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -17,6 +18,33 @@ class NetworkService {
     if (response.statusCode == 200) {
       final rs = await http.Response.fromStream(response);
       ResponseModel result = responseModelFromJson(rs.body);
+
+      return result;
+    } else {
+      throw (response.reasonPhrase!);
+    }
+  }
+
+  Future wajid(File file) async {
+    var headers = {
+      'accept': 'application/json',
+      'Content-Type': 'multipart/form-data'
+    };
+
+    var request = http.MultipartRequest(
+        'POST', Uri.parse('https://fyp-2-area.herokuapp.com/percent'));
+
+    print(file.path);
+    request.files.add(await http.MultipartFile.fromPath('file', file.path));
+    request.headers.addAll(headers);
+
+    http.StreamedResponse response = await request.send();
+
+    if (response.statusCode == 200) {
+      final rs = await http.Response.fromStream(response);
+
+      print(rs.body);
+      var result = jsonDecode(rs.body);
 
       return result;
     } else {

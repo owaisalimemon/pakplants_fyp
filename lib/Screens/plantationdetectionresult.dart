@@ -8,7 +8,7 @@ import 'package:pakplants/widgets/bottomnavigationbar.dart';
 import 'package:pakplants/widgets/centerfloating.dart';
 
 class PlantationResult extends StatelessWidget {
-  ResponseModel result;
+  var result;
   Plantationdetectcontroller controller;
   PlantationResult({required this.result, required this.controller});
   late double width, height;
@@ -55,7 +55,7 @@ class PlantationResult extends StatelessWidget {
                     ),
                     SizedBox(height: height * 0.05),
                     Text(
-                      result.results.first.species.scientificName,
+                      "Plantaion in selected",
                       style: TextStyle(
                           color: Color(0xff1c6434), fontSize: height * 0.04),
                     ),
@@ -67,7 +67,7 @@ class PlantationResult extends StatelessWidget {
                     ),
                     SizedBox(height: height * 0.025),
                     Text(
-                      "40%",
+                      (result[0]).toString() + "%",
                       style: TextStyle(
                           color: Colors.red,
                           fontSize: height * 0.06,
