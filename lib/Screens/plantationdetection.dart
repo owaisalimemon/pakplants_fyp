@@ -101,9 +101,9 @@ class PlantationDetection extends ConsumerWidget {
                   controller.notifyListeners();
                 },
                 myLocationEnabled: true,
-                mapType: MapType.normal,
+                mapType: MapType.satellite,
                 initialCameraPosition:
-                    CameraPosition(target: LatLng(23.5880, 58.3829), zoom: 25),
+                    CameraPosition(target: LatLng(23.5880, 58.3829), zoom: 20),
                 minMaxZoomPreference: MinMaxZoomPreference(17.5, 22),
               ),
               SizedBox(height: height * 0.05),

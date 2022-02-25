@@ -115,7 +115,7 @@ class _Tileforcart_screenState extends State<Tileforcart_screen> {
                             onPressed: () {},
                             icon: Icon(
                               Icons.delete_rounded,
-                              size: 35,
+                              size: height * 0.03,
                               color: Colors.red,
                             )),
                       ))

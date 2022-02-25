@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:pakplants/Screens/cart.dart';
+import 'package:pakplants/Screens/login.dart';
 import 'package:pakplants/buttons/button2.dart';
 import 'package:pakplants/widgets/bottomnavigationbar.dart';
 import 'package:pakplants/widgets/centerfloating.dart';
@@ -128,7 +129,7 @@ class _Plantinfoforsale_screenState extends State<Plantinfoforsale_screen> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Cart_screen()),
+                                  builder: (context) => Logins_screen()),
                             );
                           }),
                     ],
