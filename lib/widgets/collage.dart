@@ -51,7 +51,7 @@ class _CollagehomeState extends State<Collagehome> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage('assets/images/back.png'),
+                              image: AssetImage('assets/images/roseee.jpg'),
                               fit: BoxFit.fill)),
                     ),
                   ),

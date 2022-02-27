@@ -105,20 +105,20 @@ class _Tileforcart_screenState extends State<Tileforcart_screen> {
                         ),
                       )),
 
-                  Positioned(
-                      top: height * 0.001,
-                      left: width * 0.68,
-                      child: Container(
-                        width: width * 0.13,
-                        height: height * 0.05,
-                        child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.delete_rounded,
-                              size: height * 0.03,
-                              color: Colors.red,
-                            )),
-                      ))
+                  // Positioned(
+                  //     top: height * 0.001,
+                  //     left: width * 0.68,
+                  //     child: Container(
+                  //       width: width * 0.13,
+                  //       height: height * 0.05,
+                  //       child: IconButton(
+                  //           onPressed: () {},
+                  //           icon: Icon(
+                  //             Icons.delete_rounded,
+                  //             size: height * 0.03,
+                  //             color: Colors.red,
+                  //           )),
+                  //     ))
 
                   // Positioned(
                   //     top: height * 0.1,

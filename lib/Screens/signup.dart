@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pakplants/buttons/button134.dart';
 import 'package:pakplants/buttons/button2.dart';
+import 'package:pakplants/controller/signupcontroller.dart';
 import 'package:pakplants/widgets/textfield.dart';
 
 import 'home.dart';
 import 'login.dart';
 
-class Signup_Screen extends StatefulWidget {
-  const Signup_Screen({Key? key}) : super(key: key);
+class Signup_Screen extends ConsumerWidget {
+  Signup_Screen({Key? key}) : super(key: key);
 
-  @override
-  _Signup_ScreenState createState() => _Signup_ScreenState();
-}
-
-class _Signup_ScreenState extends State<Signup_Screen> {
   late double width, height;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, watch) {
+    var controller = watch(getsignedup);
     width = MediaQuery.of(context).size.width;
     height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -55,7 +53,7 @@ class _Signup_ScreenState extends State<Signup_Screen> {
                           text: 'Email address',
                           icon: Icons.person,
                           password: false,
-                          controller: TextEditingController()),
+                          controller: controller.emailcontroller),
 
                       SizedBox(
                         height: height * 0.02,
@@ -64,7 +62,7 @@ class _Signup_ScreenState extends State<Signup_Screen> {
                           text: 'Password',
                           icon: Icons.visibility_off,
                           password: true,
-                          controller: TextEditingController()),
+                          controller: controller.passwordcontroller),
 
                       SizedBox(
                         height: height * 0.02,
@@ -73,7 +71,7 @@ class _Signup_ScreenState extends State<Signup_Screen> {
                           text: 'Re Enter Password',
                           icon: Icons.visibility_off,
                           password: true,
-                          controller: TextEditingController()),
+                          controller: controller.password2controleer),
 
                       SizedBox(
                         height: height * 0.02,
@@ -108,12 +106,8 @@ class _Signup_ScreenState extends State<Signup_Screen> {
                               color: Color(0xff1c6434),
                               radius: 30,
                               enable: true,
-                              callback: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Home_Screen()),
-                                );
+                              callback: () async {
+                                await controller.emialsignuip(context);
                               }),
                         ),
                       ),

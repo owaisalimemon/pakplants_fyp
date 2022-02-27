@@ -21,6 +21,7 @@ class Textfiledfor extends StatelessWidget {
       ),
       elevation: 2,
       child: TextFormField(
+        controller: controller,
         obscureText: password,
         decoration: InputDecoration(
           contentPadding: EdgeInsets.symmetric(

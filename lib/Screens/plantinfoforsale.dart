@@ -86,54 +86,41 @@ class _Plantinfoforsale_screenState extends State<Plantinfoforsale_screen> {
                 SizedBox(
                   height: height * 0.03,
                 ),
+                Center(
+                  child: Text('Rs ' + widget.object['price'].toString(),
+                      style: TextStyle(
+                          color: Colors.red,
+                          fontSize: width * 0.1,
+                          fontWeight: FontWeight.bold)),
+                ),
+                SizedBox(
+                  height: height * 0.03,
+                ),
                 informationtext('Plant Name :', widget.object['product_name']),
                 SizedBox(
                   height: height * 0.05,
                 ),
-                informationtext('Plant info :',
-                    'rose,genus of some 100 species of perennial shrubs in the rose family (Rosaceae).'),
+                informationtext('Plant info :', widget.object['description']),
                 SizedBox(
                   height: height * 0.05,
                 ),
-                informationtext('Pros & Cons :',
-                    'Pros Clear, bright colors; may bloom all year in warm climates; disease resistant. Cons May lack scent; the nonstop flowers can become boring; some gardeners find them too common and ordinary.'),
+                informationtext('Pros & Cons :', widget.object['prosandcons']),
                 SizedBox(
                   height: height * 0.05,
                 ),
-                Padding(
-                  padding:
-                      EdgeInsets.only(left: width * 0.05, right: width * 0.05),
-                  child: Row(
-                    children: [
-                      button2(
-                          text: "Add to Cart",
-                          color: Color(0xff1c6434),
-                          radius: 30,
-                          enable: true,
-                          callback: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Cart_screen()),
-                            );
-                          }),
-                      SizedBox(
-                        width: width * 0.11,
-                      ),
-                      button2(
-                          text: "Buy",
-                          color: Color(0xff1c6434),
-                          radius: 30,
-                          enable: true,
-                          callback: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Logins_screen()),
-                            );
-                          }),
-                    ],
-                  ),
+                Center(
+                  child: button2(
+                      text: "Buy",
+                      color: Color(0xff1c6434),
+                      radius: 30,
+                      enable: true,
+                      callback: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Logins_screen()),
+                        );
+                      }),
                 ),
               ],
             )),

@@ -103,14 +103,13 @@ class _TielforsaleState extends State<Tielforsale> {
                                     color: Colors.black,
                                     fontSize: width * 0.07)),
                             SizedBox(height: height * 0.01),
-                            Text(
-                                'rose,genus of some 100 species of perennial shrubs in the rose family (Rosaceae). ',
+                            Text(widget.object['description'],
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     color: Colors.black,
                                     fontSize: width * 0.035)),
                             SizedBox(height: height * 0.01),
-                            Text('Rs.2000',
+                            Text('Rs ' + widget.object['price'].toString(),
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.red,
@@ -123,12 +122,18 @@ class _TielforsaleState extends State<Tielforsale> {
                   //   top: height * 0.13,
                   //   left: width * 0.7,
                   //   child: Card(
-                  //     shape: RoundedRectangleBorder(
-                  //       borderRadius: BorderRadius.circular(30.0),
-                  //     ),
-                  //     elevation: 2,
-                  //     child: buttonforsale('Buy', Color(0xff1c6434), 30, true),
-                  //   ),
+                  //       shape: RoundedRectangleBorder(
+                  //         borderRadius: BorderRadius.circular(30.0),
+                  //       ),
+                  //       elevation: 2,
+                  //       child: ButtonforSale(
+                  //           text: 'Buy',
+                  //           color: Color(0xff1c6434),
+                  //           radius: 30,
+                  //           enable: true,
+                  //           onTap: () {
+                  //             print('daba');
+                  //           })),
                   // ),
 
                   // Positioned(

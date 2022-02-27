@@ -50,7 +50,7 @@ class _Cart_screenState extends State<Cart_screen> {
               Center(
                 child: Container(
                   width: width * 0.9,
-                  height: height * 0.65,
+                  height: height * 0.3,
                   decoration: BoxDecoration(
                     border: Border.all(color: Color(0xff1c6434), width: 4),
                     borderRadius: BorderRadius.circular(10),
@@ -60,58 +60,45 @@ class _Cart_screenState extends State<Cart_screen> {
                       Center(
                         child: Container(
                           width: width * 0.8,
-                          height: height * 0.5,
+                          height: height * 0.2,
                           // decoration: BoxDecoration(
                           //   border: Border.all(color: Color(0xff1c6434), width: 4),
                           //   borderRadius: BorderRadius.circular(10),
                           // ),
                           child: ListView.builder(
-                              itemCount: 3,
+                              itemCount: 1,
                               itemBuilder: (BuildContext context, int index) =>
                                   Tileforcart_screen()),
                         ),
                       ),
                       Center(
-                        child: Container(
-                          width: width * 0.9,
-                          height: height * 0.1,
-                          child: Row(
-                            children: <Widget>[
-                              button134(
-                                  'Delete All',
-                                  true,
-                                  TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    fontSize: width * 0.055,
-                                    fontWeight: FontWeight.w800,
-                                    color: Colors.red,
-                                  ), () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Home_Screen()),
-                                );
-                              }),
-                              SizedBox(
-                                width: width * 0.2,
-                              ),
-                              Text('Total : Rs.6000/_',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.red,
-                                      fontSize: width * 0.055)),
-                            ],
-                          ),
-                        ),
+                        child: Text('Total : Rs.2000/_',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.red,
+                                fontSize: width * 0.055)),
                       ),
                     ],
                   ),
                 ),
               ),
               SizedBox(height: height * 0.02),
+              Container(
+                width: width * 0.7,
+                child: Center(
+                  child: Text(
+                      'Your address is placed, Our team will contact on your email for further process.',
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xff1c6434),
+                          fontSize: width * 0.055)),
+                ),
+              ),
+              SizedBox(height: height * 0.05),
               Center(
                 child: button2(
-                    text: "Checkout",
+                    text: "OK",
                     color: Color(0xff1c6434),
                     radius: 30,
                     enable: true,

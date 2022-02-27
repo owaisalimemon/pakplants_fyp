@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pakplants/Screens/signup.dart';
 import 'package:pakplants/buttons/button134.dart';
 import 'package:pakplants/buttons/button2.dart';
+import 'package:pakplants/controller/signincontroller.dart';
 import 'package:pakplants/widgets/textfield.dart';
 
 import 'home.dart';
 
-class Logins_screen extends StatefulWidget {
-  const Logins_screen({Key? key}) : super(key: key);
+class Logins_screen extends ConsumerWidget {
+  Logins_screen({Key? key}) : super(key: key);
 
-  @override
-  _Logins_screenState createState() => _Logins_screenState();
-}
-
-class _Logins_screenState extends State<Logins_screen> {
   late double width, height;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, watch) {
+    var controller = watch(getsignedin);
     width = MediaQuery.of(context).size.width;
     height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -55,7 +53,7 @@ class _Logins_screenState extends State<Logins_screen> {
                           text: 'Email address',
                           icon: Icons.person,
                           password: false,
-                          controller: TextEditingController()),
+                          controller: controller.emailcontroller),
                       SizedBox(
                         height: height * 0.03,
                       ),
@@ -63,27 +61,9 @@ class _Logins_screenState extends State<Logins_screen> {
                           text: 'Password',
                           icon: Icons.visibility_off,
                           password: true,
-                          controller: TextEditingController()),
+                          controller: controller.passwordcontroller),
                       SizedBox(
                         height: height * 0.01,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: width * 0.04),
-                        child: Container(
-                          child: button134(
-                              "Forgot password ?",
-                              true,
-                              TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w800,
-                                  color: Colors.grey.shade700), () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Logins_screen()),
-                            );
-                          }),
-                        ),
                       ),
                       SizedBox(
                         height: height * 0.03,
@@ -100,11 +80,7 @@ class _Logins_screenState extends State<Logins_screen> {
                               radius: 30,
                               enable: true,
                               callback: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => Home_Screen()),
-                                );
+                                controller.emialsignin(context);
                               }),
                         ),
                       ),
