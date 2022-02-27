@@ -12,7 +12,7 @@ class NetworkService {
       'Content-Type': 'multipart/form-data'
     };
     var request = http.MultipartRequest(
-        'POST', Uri.parse('https://new-plant.herokuapp.com/plant'));
+        'POST', Uri.parse('http://15.207.18.64:8080/plant'));
     request.files.add(await http.MultipartFile.fromPath('file', file.path));
     request.headers.addAll(headers);
 

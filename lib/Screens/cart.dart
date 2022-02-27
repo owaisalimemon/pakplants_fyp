@@ -89,7 +89,7 @@ class _Cart_screenState extends State<Cart_screen> {
                 width: width * 0.7,
                 child: Center(
                   child: Text(
-                      'Your address is placed, Our team will contact on your email for further process.',
+                      'Your order is placed, Our team will contact on your email for further process.',
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
