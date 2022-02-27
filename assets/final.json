@@ -1,0 +1,219 @@
+[
+ 
+        {
+            "Plant_name_in_model": "Apple",
+            "Plant_scientific_name": " Malus Domestica",
+            "Plant_common_name": "Common Apple",
+            "Plant_Information": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today.",
+            "Plant_pros": "Nutritious, May Support Weight loss, Good for your heart, Prevent Cancer, Easy to grow, Quick growing tree once established",
+            "Plant_cons": "Full sized trees need a lot of space, You may need more than one tree for pollination, Can have issues with pests or fungal infections"
+        },
+        {
+            "Plant_name_in_model": "Arjun",
+            "Plant_scientific_name": "Terminalia arjuna",
+            "Plant_common_name": "Arjuna ",
+            "Plant_Information": "Arjuna grows to about 20–25 metres tall usually has a buttressed trunk, and forms a wide canopy at the crown, from which branches drop downwards. It has oblong, conical leaves which are green on the top and brown below",
+            "Plant_pros": "It promotes heart health, Gigh in antioxidants, May aid blood sugar control, May reduce cancer risk ",
+            "Plant_cons": "It can cause nausea, headaches, body aches, and constipation "
+        },
+      
+        {
+            "Plant_name_in_model": "Bael",
+            "Plant_scientific_name": "Aegle marmelos",
+            "Plant_common_name": "bael tree",
+            "Plant_Information": "Bel or Bael in Hindi, and as wood apple, stone apple, Bengal quince, Indian quince, holy fruit or golden apple in English, is an important medicinal tree in India. Bael trees are found growing in abundance in the Himalayan regions, Bengal, Central and South India, as well as in Srilanka, Burma, Thailand, Bangladesh, Nepal, Vietnam, Laos, Cambodia, and Pakistan.",
+            "Plant_pros": "It can cure Constipation, Depression, Diabetes, Diarrhea, Snake bite, Stomach Ache",
+            "Plant_cons": "It might lower blood sugar levels so, Stop using bael at least 2 weeks before a scheduled surgery."
+        },
+      
+        {
+            "Plant_name_in_model": "Basil ",
+            "Plant_scientific_name": "Ocimum basilicum",
+            "Plant_common_name": "Basil ",
+            "Plant_Information": "Basil also called great basil, is a culinary herb of the family Lamiaceae (mints). In Western cuisine, the generic term \"basil\" refers to the variety also known as sweet basil or Genovese basil which is native to tropical regions from Central Africa to Southeast Asia",
+            "Plant_pros": "It can be benefitial in Intestinal gas, Stomach spasms, Kidney disorders, Worms, Blood circulation, Snake and Insect Bites.",
+            "Plant_cons": "It might slow blood clotting and increase bleeding. It can also lower blood pressure"
+        },
+    
+        {
+            "Plant_name_in_model": "Blueberry",
+            "Plant_scientific_name": "Vaccinium cyanococcus ",
+            "Plant_common_name": "Blueberry",
+            "Plant_Information": "Blueberries are a widely distributed and widespread group of perennial flowering plants with blue or purple berries. They are classified in the section Cyanococcus within the genus Vaccinium. Vaccinium also includes cranberries, bilberries, huckleberries and Madeira",
+            "Plant_pros": "They are delicious, nutritious, Low on glycemic index and alos have large amounts of nutrients",
+            "Plant_cons": "They can affect blood sugar levels, can interfere with surgery and may have pesticides"
+        },
+    
+        {
+            "Plant_name_in_model": "Cherry ",
+            "Plant_scientific_name": "Prunus avium",
+            "Plant_common_name": "cherry, sweet cherry",
+            "Plant_Information": "A cherry is the fruit of many plants of the genus Prunus, and is a fleshy drupe. ",
+            "Plant_pros": "They're high in nutrients, rich in antioxidants, can boost exercise recovery.",
+            "Plant_cons": "Excessive consumption can cause intestinal gas, bloating and cramps."
+        },
+  
+        {
+            "Plant_name_in_model": "Chinar",
+            "Plant_scientific_name": "Platanus orientalis",
+            "Plant_common_name": "Plan tree",
+            "Plant_Information": "Chinar trees characteristically grow in Eastern Himalayas. Their botanical name is Platanus orientalis. They have been an important part of Kashmiri tradition",
+            "Plant_pros": "The twigs and barks have extensive uses in making fabric dyes.&#10;The timber, which is also known as lacewood, is popular in making furniture. Leaves and bark of the tree have multiple uses in the preparation of medicines ",
+            "Plant_cons": "It might cause queasiness, dizziness, headache, and diarrhea."
+        },
+     
+        {
+            "Plant_name_in_model": "Corn",
+            "Plant_scientific_name": "Zea mays",
+            "Plant_common_name": "maize",
+            "Plant_Information": " Corn is a genus of flowering plants in the grass family. The best-known species is Z. mays (variously called maize, corn, or Indian corn), one of the most important crops for human societies throughout much of the world. ",
+            "Plant_pros": "It prevents haemorrhoids, promotes weight gain, provides minerals. ",
+            "Plant_cons": "It has extremely high amounts of fatty acids and therefore should be consumed with caution. People who are generally at risk of heart diseases"
+        },
+      
+
+        {
+            "Plant_name_in_model": "Guava",
+            "Plant_scientific_name": "Psidium guajava",
+            "Plant_common_name": "Guava, yellow guava, ",
+            "Plant_Information": "Guava is a common tropical fruit cultivated in many tropical and subtropical regions. The common guava Psidium guajava is a small tree in the myrtle family (Myrtaceae), native to Mexico, Central America",
+            "Plant_pros": "It May Help Lower Blood Sugar Levels, May Boost Heart Health, May Help Relieve Painful Symptoms of Menstruation, Benefit Your Digestive System ",
+            "Plant_cons": "Its extract contains chemicals that can cause skin irritation, especially in people with skin conditions like eczema. If you have eczema, use guava leaf."
+        },
+   
+        {
+            "Plant_name_in_model": "Grape",
+            "Plant_scientific_name": "Vitis",
+            "Plant_common_name": "grape vine",
+            "Plant_Information": "It is a genus of 79 accepted species of vining plants in the flowering plant family Vitaceae. Most cultivated Vitis varieties",
+            "Plant_pros": "It can be benefitial in preventing Cancer, Heart health, Blood pressure.",
+            "Plant_cons": " Eating large quantities of it might cause diarrhea. Some people have allergic reactions to it and its products. Some other side effects might include cough, dry mouth, and headache."
+        },
+    
+        {
+            "Plant_name_in_model": "Jamun",
+            "Plant_scientific_name": "Syzygium cumini",
+            "Plant_common_name": "Black plum",
+            "Plant_Information": "is an evergreen tropical tree in the flowering plant family Myrtaceae, and favored for its fruit, timber, and ornamental value. It is native to the Indian Subcontinent",
+            "Plant_pros": "It helps in the management of Diabetes. ",
+            "Plant_cons": "Excess consumption of it can lead to an increase in blood sugar level"
+        },
+  
+        {
+            "Plant_name_in_model": "Jatropha",
+            "Plant_scientific_name": "Nettlespurges",
+            "Plant_common_name": "physic nut",
+            "Plant_Information": "Jatropha is a genus of flowering plants in the spurge family, Euphorbiaceae. It contains approximately 170 species of succulent plants.",
+            "Plant_pros": "It is easy to cultivate it. These can grow on all the climatic conditions and soils hence it is cultivated in most of the places.",
+            "Plant_cons": "One disadvantageof them is that it is toxic to livestock, which the multitudes of tenant farmers raise for their often meager sustenance"
+        },
+        {
+            "Plant_name_in_model": "Lemon",
+            "Plant_scientific_name": "Citrus limon",
+            "Plant_common_name": "lemon",
+            "Plant_Information": "The lemon (Citrus limon) is a species of small evergreen trees in the flowering plant family Rutaceae, native to Asia, primarily Northeast",
+            "Plant_pros": "Prevent Kidney Stones, Protect Against Anemia, Reduce Cancer Risk",
+            "Plant_cons": "It contains citric acid, which may abrade tooth enamel."
+        },
+    
+        {
+            "Plant_name_in_model": "Mango",
+            "Plant_scientific_name": "Mangifera indica",
+            "Plant_common_name": "mango",
+            "Plant_Information": "Mango is a species of flowering plant in the family Anacardiaceae  Mangoes are believed to have originated from the region between Bangladesh, and India",
+            "Plant_pros": "Prevents anemia, Improves digestion, Helps gain weight, Keeps heart healthy",
+            "Plant_cons": "May Cause Diarrhea, May Cause Weight Gain, May Increase Blood Sugar Levels"
+        },
+
+        {
+            "Plant_name_in_model": "Peach",
+            "Plant_scientific_name": "Prunus persica",
+            "Plant_common_name": "Peach ",
+            "Plant_Information": "The peach (Prunus persica) is a deciduous tree native to the region of Northwest China between the Tarim Basin and the north slopes",
+            "Plant_pros": "Promote Healing, Help Your Eyesight, Keep Digestion Running Smoothly",
+            "Plant_cons": "It can cause increased risk of colorectal cancer in men, They might contain poorly"
+        },
+    
+        {
+            "Plant_name_in_model": "Pepper",
+            "Plant_scientific_name": "Schinus molle",
+            "Plant_common_name": "California pepper ",
+            "Plant_Information": "Schinus molle is a quick growing evergreen tree that grows up to 15 meters (50 feet) tall and wide. It is the largest of all Schinus species and potentially the longest lived",
+            "Plant_pros": "In folk medicine, this plant has been used to treat ulcers, respiratory problems. ",
+            "Plant_cons": "Not surprisingly, the attractive leaflets of pepper trees can cause similar allergic skin reactions."
+        },
+     
+        {
+            "Plant_name_in_model": "Pomegranate",
+            "Plant_scientific_name": "Punica granatum",
+            "Plant_common_name": "Anar",
+            "Plant_Information": "The pomegranate (Punica granatum) is a fruit-bearing deciduous shrub in the family Lythraceae, subfamily Punicoideae, that grows between 5 and 10 m (16 and 33 ft) tall.",
+            "Plant_pros": "Lowering Risk of Cancer, Diabetes Control, Heart Health, ",
+            "Plant_cons": "Pests, Leaf and Fruit Spots, Fruit Rots, Molds"
+        },
+     
+        {
+            "Plant_name_in_model": "pongamia pinnata",
+            "Plant_scientific_name": "Millettia pinnata",
+            "Plant_common_name": "Karanja",
+            "Plant_Information": "Millettia pinnata is a legume tree that grows to about 15–25 m (50–80 ft) in height with a large canopy that spreads equally wide. It may be deciduous for short periods.",
+            "Plant_pros": "The seeds have many industrial and medicinal uses. Seed oil has antiseptic properties. ",
+            "Plant_cons": "The rats treated with suspension Karanja seed churana orally with dose of 1600mg/kg body weight daily."
+        },
+       
+    
+        {
+            "Plant_name_in_model": "Potato",
+            "Plant_scientific_name": "Solanum tuberosum",
+            "Plant_common_name": "Aalu",
+            "Plant_Information": "The potato is a starchy tuber of the plant Solanum tuberosum and is a root vegetable native to the Americas. The plant is a perennial in the nightshade family Solanaceae.",
+            "Plant_pros": "They are good source of fiber, which can help you lose weight by keeping you full longer",
+            "Plant_cons": "They have high glycemic index which shows negative impact on your blood sugar levels"
+        },
+        {
+            "Plant_name_in_model": "Raspberry",
+            "Plant_scientific_name": "Rubus idaeus",
+            "Plant_common_name": "rusbhari",
+            "Plant_Information": "The raspberry is the edible fruit of a multitude of plant species in the genus Rubus of the rose family.",
+            "Plant_pros": "Heart health, Brainpower, Cancer prevention, Diabetes management, Digestion.",
+            "Plant_cons": "They have thorns. This can make picking the fruit or caring for the plant a challenge."
+        },
+   
+        {
+            "Plant_name_in_model": "Soybean",
+            "Plant_scientific_name": "Glycine max",
+            "Plant_common_name": "soja bean ",
+            "Plant_Information": "The soybean, soy bean, or soya bean (Glycine max) is a species of legume native to East Asia, widely grown for its edible bean, which has numerous uses.",
+            "Plant_pros": "It has Protein, Fat, Fiber, Carbs, May reduce cancer risk, Alleviation of menopause symptoms, Bone health",
+            "Plant_cons": "It can cause some mild stomach and intestinal side effects such as constipation, bloating, and nausea."
+        },
+            
+        {
+            "Plant_name_in_model": "Strawberry",
+            "Plant_scientific_name": "Fragaria × ananassa",
+            "Plant_common_name": "Strawberry",
+            "Plant_Information": "The garden strawberry (or simply strawberry; Fragaria × ananassa) is a widely grown hybrid species of the genus Fragaria,",
+            "Plant_pros": "It can prevent Heart disease, Stroke, Cancer, High blood pressure, Constipation.",
+            "Plant_cons": "The disadvantage of strawberries is that they may contain pesticide residue."
+        },
+    
+        {
+            "Plant_name_in_model": "Tomato",
+            "Plant_scientific_name": "Solanum lycopersicum",
+            "Plant_common_name": "Tomato",
+            "Plant_Information": "It is the edible berry of the plant Solanum lycopersicum, commonly known as a tomato plant. The species originated in western South America and Central America",
+            "Plant_pros": "It Improves Heart health, Cancer prevention, Skin health.",
+            "Plant_cons": "They require a lot more water. Another of the disadvantages of growing them upside down is the exposure of the root ball"
+        },
+  
+        {
+            "Plant_name_in_model": "Blackboard Tree",
+            "Plant_scientific_name": "alstonia scholaris",
+            "Plant_common_name": "devil's tree",
+            "Plant_Information": "Alstonia scholaris is a glabrous tree and grows up to 40 m (130 ft) tall. Its mature bark is grayish and its young branches are copiously marked with lenticels.",
+            "Plant_pros": "It has an indigenous system of medicine and used as a tonic. This plant is used as a drug which helps in restoring the digestive system.",
+            "Plant_cons": "It can cause allergic reactions, it also have the teratogenic effects."
+        }
+       
+
+    ]

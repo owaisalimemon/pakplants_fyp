@@ -2,18 +2,28 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:pakplants/controller/scanimagecontroller.dart';
 import 'package:pakplants/model/responsemodel.dart';
 import 'package:pakplants/widgets/bottomnavigationbar.dart';
 import 'package:pakplants/widgets/centerfloating.dart';
 
-class IndefiedPlant_Screen extends StatelessWidget {
-  // ResponseModel result;
+class IndefiedPlant_Screen extends StatefulWidget {
   String result;
   scanimagecontroller controller;
   IndefiedPlant_Screen({required this.result, required this.controller});
+
+  @override
+  _IndefiedPlant_ScreenState createState() => _IndefiedPlant_ScreenState();
+}
+
+class _IndefiedPlant_ScreenState extends State<IndefiedPlant_Screen> {
   double width = 0, height = 0;
+  @override
+
+  // ResponseModel result;
+
   @override
   Widget build(BuildContext context) {
     width = MediaQuery.of(context).size.width;
@@ -53,7 +63,7 @@ class IndefiedPlant_Screen extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
                         image: DecorationImage(
-                            image: FileImage(File(controller.image!)),
+                            image: FileImage(File(widget.controller.image!)),
                             fit: BoxFit.cover)),
                   ),
                 ),
@@ -82,7 +92,7 @@ class IndefiedPlant_Screen extends StatelessWidget {
                             border: Border.all(color: Colors.red, width: 4)),
                         width: width * 0.58,
                         child: Text(
-                          this.result,
+                          widget.result,
                           style: TextStyle(
                               fontSize: height * 0.025,
                               fontWeight: FontWeight.w500),
