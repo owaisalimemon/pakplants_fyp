@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pakplants/buttons/buttonforsale.dart';
 
 class Tileforcart_screen extends StatefulWidget {
-  const Tileforcart_screen({Key? key}) : super(key: key);
+  String price;
+  Tileforcart_screen({required this.price});
 
   @override
   _Tileforcart_screenState createState() => _Tileforcart_screenState();
@@ -95,7 +96,7 @@ class _Tileforcart_screenState extends State<Tileforcart_screen> {
                             SizedBox(height: height * 0.005),
                             Padding(
                               padding: EdgeInsets.only(left: width * 0.31),
-                              child: Text('Rs.2000',
+                              child: Text('Rs ' + widget.price,
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.red,

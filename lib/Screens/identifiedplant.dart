@@ -9,7 +9,8 @@ import 'package:pakplants/widgets/bottomnavigationbar.dart';
 import 'package:pakplants/widgets/centerfloating.dart';
 
 class IndefiedPlant_Screen extends StatelessWidget {
-  ResponseModel result;
+  // ResponseModel result;
+  String result;
   scanimagecontroller controller;
   IndefiedPlant_Screen({required this.result, required this.controller});
   double width = 0, height = 0;
@@ -81,7 +82,7 @@ class IndefiedPlant_Screen extends StatelessWidget {
                             border: Border.all(color: Colors.red, width: 4)),
                         width: width * 0.58,
                         child: Text(
-                          result.bestMatch,
+                          this.result,
                           style: TextStyle(
                               fontSize: height * 0.025,
                               fontWeight: FontWeight.w500),
@@ -93,14 +94,7 @@ class IndefiedPlant_Screen extends StatelessWidget {
                 SizedBox(
                   height: height * 0.05,
                 ),
-                informationtext(
-                    'Plant info :',
-                    this
-                        .result
-                        .results
-                        .first
-                        .species
-                        .scientificNameWithoutAuthor),
+                informationtext('Plant info :', 'abc123'),
                 SizedBox(
                   height: height * 0.05,
                 ),

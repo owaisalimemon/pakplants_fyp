@@ -68,7 +68,9 @@ class _Cart_screenState extends State<Cart_screen> {
                           child: ListView.builder(
                               itemCount: 1,
                               itemBuilder: (BuildContext context, int index) =>
-                                  Tileforcart_screen()),
+                                  Tileforcart_screen(
+                                    price: widget.price,
+                                  )),
                         ),
                       ),
                       Center(

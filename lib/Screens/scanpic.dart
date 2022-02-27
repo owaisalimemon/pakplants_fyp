@@ -154,14 +154,14 @@ class Scanpic_screen extends ConsumerWidget {
                             progressDialog.show();
 
                             var result = await NetworkService()
-                                .postimage(File(controller.image!));
+                                .postimage(File(controller.image.toString()));
                             progressDialog.dismiss();
                             controller.notifyListeners();
 
                             await Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
                               return IndefiedPlant_Screen(
-                                result: result,
+                                result: result[0].toString(),
                                 controller: controller,
                               );
                             }));
@@ -181,6 +181,7 @@ class Scanpic_screen extends ConsumerWidget {
                                     TextButton(
                                       child: const Text('Ok'),
                                       onPressed: () {
+                                        progressDialog.dismiss();
                                         Navigator.of(context).pop();
                                       },
                                     ),
