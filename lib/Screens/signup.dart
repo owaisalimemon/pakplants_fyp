@@ -132,7 +132,9 @@ class Signup_Screen extends ConsumerWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Logins_screen()),
+                                  builder: (context) => Logins_screen(
+                                        price: '',
+                                      )),
                             );
                           }),
                         ],

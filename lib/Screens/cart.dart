@@ -9,8 +9,8 @@ import 'package:pakplants/widgets/tileforsale.dart';
 import 'home.dart';
 
 class Cart_screen extends StatefulWidget {
-  const Cart_screen({Key? key}) : super(key: key);
-
+  String price;
+  Cart_screen({required this.price});
   @override
   _Cart_screenState createState() => _Cart_screenState();
 }
@@ -72,7 +72,7 @@ class _Cart_screenState extends State<Cart_screen> {
                         ),
                       ),
                       Center(
-                        child: Text('Total : Rs.2000/_',
+                        child: Text('Total : Rs.${widget.price}/_',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.red,

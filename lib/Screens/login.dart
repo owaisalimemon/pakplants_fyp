@@ -9,7 +9,8 @@ import 'package:pakplants/widgets/textfield.dart';
 import 'home.dart';
 
 class Logins_screen extends ConsumerWidget {
-  Logins_screen({Key? key}) : super(key: key);
+  String price;
+  Logins_screen({required this.price});
 
   late double width, height;
   @override
@@ -80,7 +81,7 @@ class Logins_screen extends ConsumerWidget {
                               radius: 30,
                               enable: true,
                               callback: () {
-                                controller.emialsignin(context);
+                                controller.emialsignin(context, price);
                               }),
                         ),
                       ),

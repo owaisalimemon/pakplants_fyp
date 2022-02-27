@@ -19,9 +19,7 @@ class SigninAuth extends ChangeNotifier {
   TextEditingController emailcontroller = TextEditingController();
   TextEditingController passwordcontroller = TextEditingController();
 
-  Future emialsignin(
-    BuildContext context,
-  ) async {
+  Future emialsignin(BuildContext context, String price) async {
     if (emailcontroller.text.isEmpty) {
       SnackbarWidget().showsnackbar('Email is empty', context);
       return;
@@ -49,7 +47,10 @@ class SigninAuth extends ChangeNotifier {
 
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Cart_screen()),
+        MaterialPageRoute(
+            builder: (context) => Cart_screen(
+                  price: price,
+                )),
       );
     } catch (error) {
       return showDialog(

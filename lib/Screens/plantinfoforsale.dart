@@ -118,7 +118,9 @@ class _Plantinfoforsale_screenState extends State<Plantinfoforsale_screen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Logins_screen()),
+                              builder: (context) => Logins_screen(
+                                    price: widget.object['price'].toString(),
+                                  )),
                         );
                       }),
                 ),
