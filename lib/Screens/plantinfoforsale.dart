@@ -55,7 +55,6 @@ class _Plantinfoforsale_screenState extends State<Plantinfoforsale_screen> {
       // bottomNavigationBar: BottomNav(),
       body: SingleChildScrollView(
         child: Container(
-            height: height,
             width: width,
             decoration: BoxDecoration(
               image: DecorationImage(
