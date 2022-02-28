@@ -14,9 +14,11 @@ import 'package:pakplants/Screens/profile.dart';
 import 'package:pakplants/Screens/sale.dart';
 import 'package:pakplants/Screens/scanpic.dart';
 import 'package:pakplants/Screens/signup.dart';
+import 'package:pakplants/helper/getdata.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await DataController.getdata();
   await Firebase.initializeApp();
   runApp(ProviderScope(child: MyApp()));
 }

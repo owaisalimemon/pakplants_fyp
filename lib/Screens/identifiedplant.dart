@@ -1,10 +1,13 @@
 import 'dart:io';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:pakplants/controller/scanimagecontroller.dart';
+import 'package:pakplants/helper/getdata.dart';
+import 'package:pakplants/model/datamodel.dart';
 import 'package:pakplants/model/responsemodel.dart';
 import 'package:pakplants/widgets/bottomnavigationbar.dart';
 import 'package:pakplants/widgets/centerfloating.dart';
@@ -23,6 +26,26 @@ class _IndefiedPlant_ScreenState extends State<IndefiedPlant_Screen> {
   @override
 
   // ResponseModel result;
+
+  String pros = "";
+  DataModel element = DataModel(
+      plantCommonName: '',
+      plantCons: '',
+      plantInformation: '',
+      plantNameInModel: '',
+      plantPros: '',
+      plantScientificName: '');
+
+  @override
+  void initState() {
+    var item = DataController.datalist
+        .where((element) => element.plantNameInModel == widget.result);
+
+    if (item.isNotEmpty) {
+      this.element = item.first;
+    }
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -104,12 +127,12 @@ class _IndefiedPlant_ScreenState extends State<IndefiedPlant_Screen> {
                 SizedBox(
                   height: height * 0.05,
                 ),
-                informationtext('Plant info :', 'abc123'),
+                informationtext('Plant info :', '${element.plantInformation}'),
                 SizedBox(
                   height: height * 0.05,
                 ),
                 informationtext('Pros & Cons :',
-                    'Pros Clear, bright colors; may bloom all year in warm climates; disease resistant. Cons May lack scent; the nonstop flowers can become boring; some gardeners find them too common and ordinary.'),
+                    '${element.plantPros}. ${element.plantCons}.'),
                 SizedBox(
                   height: height * 0.1,
                 ),
