@@ -1,16 +1,79 @@
-# pakplants
 
-A new Flutter project.
+# Final Year Project: PAKPLANTS
 
-## Getting Started
+**This repository contain all the frontend of project PAKPLANTS**
 
-This project is a starting point for a Flutter application.
+**PAKPLANTS  is a mobile application that allow user to to identify plants only using images of their respective leaves by uploading or capturing at real time**
+**It also allow user to identify plantation area left in an satellite images uploaded by user. Finally, offer an e-commerce store integrated inside the application.**
 
-A few resources to get you started if this is your first Flutter project:
+PAKPLANTS is based on deep learning and image processing techonology!
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![screenshot](static/image1.jpg)
+![screenshot](static/image2.jpg)
+
+
+## Built With
+
+- Flutter
+- tenserflow
+- Keras
+- AWS
+- FASTAPI
+- OpenCV
+
+
+## Live Demo
+
+[Live Demo Link]()
+
+<img src="static/image3.jpg" width="350" height="500">
+<img src="static/image4.jpg" width="350" height="500">
+
+## Back-end Link
+
+[Front-end Link](https://github.com/AbdulWajid99/PAKPLANTS_Webapp)
+
+
+
+## Setup
+
+If you installed git you can clone the code to your machine, or download a ZIP of all the files directly.
+
+Run the following [git](https://git-scm.com/downloads) command to clone the files to your machine:
+
+```bash
+git clone https://github.com/AbdulWajid99/PAKPLANTS_Webapp.git
+```
+
+- Once the files are on your machine, open the _html-css-javascript-getting-started_ folder in [Visual Studio Code](https://code.visualstudio.com/)
+
+
+
+## Authors
+
+
+👤 **Author1** GitHub: [@githubhandle](https://github.com/AbdulWajid99))
+
+👤 **Author2** GitHub: [@githubhandle](https://github.com/walikhan226))
+
+👤 **Author3** GitHub: [@githubhandle](https://github.com/Sohaib1497))
+
+👤 **Author4** GitHub: [@githubhandle](https://github.com/owaisalimemon))
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+
+## 📝 License
+
+This project is [MIT](LICENSE.txt) licensed.
+
